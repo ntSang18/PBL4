@@ -38,7 +38,7 @@ public class Service {
     public final String PATH_FILE_RECEIVE = "client_data_receive/";
     public final String PATH_FILE_SEND = "client_data_send/";
     private final int PORT_NUMBER = 9999;
-    private final String IP = "192.168.1.6";
+    private final String IP = "192.168.1.10";
 	
     private RandomAccessFile accFile;
     private long fileSize;
