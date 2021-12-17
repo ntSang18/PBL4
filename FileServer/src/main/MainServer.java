@@ -1,12 +1,11 @@
-package com.bkzalo.main;
+package main;
 
-import com.bkzalo.DemoApplication;
-import com.bkzalo.connection.DatabaseConnection;
-import com.bkzalo.service.Service;
+import javax.swing.GroupLayout.Alignment;
 
-import java.sql.SQLException;
+import service.Service;
 
-import org.springframework.boot.SpringApplication;
+import javax.swing.GroupLayout;
+
 
 
 public class MainServer extends javax.swing.JFrame {
@@ -41,38 +40,32 @@ public class MainServer extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txt);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 879, Short.MAX_VALUE)
-                .addContainerGap())
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 879, Short.MAX_VALUE)
+        			.addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
-                .addContainerGap())
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 526, Short.MAX_VALUE)
+        			.addContainerGap())
         );
+        getContentPane().setLayout(layout);
 
         pack();
         setLocationRelativeTo(null);
     }
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {
-        try {
-            DatabaseConnection.getInstance().connectToDatabase();
-            Service.Instance().StartServer();
-        } catch (SQLException e) {
-            txt.append("Error : " + e + "\n");
-        }
+        Service.Instance().StartServer();
     }
+        
     
     public static void main(String args[]) {
-    	//Star Api
-    	SpringApplication.run(DemoApplication.class, args);
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

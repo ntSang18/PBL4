@@ -16,7 +16,6 @@ public class DatabaseConnection {
     }
 
     private DatabaseConnection() {
-    	// Sang was fixed
     	try {
     		Class.forName("com.mysql.jdbc.Driver");
             String server = "localhost";

@@ -1,8 +1,10 @@
-package com.bkzalo.service;
+package service;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+
+import model.BO;
 
 public class ServiceFile{
 	
@@ -36,23 +38,8 @@ public class ServiceFile{
         return accFile.length();
     }
 
-	public void Close() throws IOException {
+	public void Close(int id) throws IOException {
+		BO.Instance().UpdateFile(id, file.getAbsolutePath());
 		accFile.close();
 	}
-	
-//	public void WriteFile() {
-//		try {
-//			File f = toFile(file);
-//			FileOutputStream fos = new FileOutputStream(f);
-//			BufferedOutputStream bos = new BufferedOutputStream(fos);
-//			bos.write(file.getData());
-//			bos.flush();
-//			bos.close();
-//			String path = f.getAbsolutePath();
-//			ServiceMessage.Instance().UpdateMessageFile(file.getId(), path);
-//			System.out.println(path);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
 }

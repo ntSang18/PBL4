@@ -1,11 +1,11 @@
-package com.bkzalo.service;
+package service;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class ServiceFile{
-	
+public class ServiceFile {
+
 	private File file;
 	private RandomAccessFile accFile;
 	
@@ -39,20 +39,4 @@ public class ServiceFile{
 	public void Close() throws IOException {
 		accFile.close();
 	}
-	
-//	public void WriteFile() {
-//		try {
-//			File f = toFile(file);
-//			FileOutputStream fos = new FileOutputStream(f);
-//			BufferedOutputStream bos = new BufferedOutputStream(fos);
-//			bos.write(file.getData());
-//			bos.flush();
-//			bos.close();
-//			String path = f.getAbsolutePath();
-//			ServiceMessage.Instance().UpdateMessageFile(file.getId(), path);
-//			System.out.println(path);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
 }

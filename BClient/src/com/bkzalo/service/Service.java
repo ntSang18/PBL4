@@ -1,10 +1,6 @@
 package com.bkzalo.service;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.net.URI;
@@ -25,7 +21,6 @@ import com.bkzalo.event.EventErorMessage;
 import com.bkzalo.event.PublicEvent;
 import com.bkzalo.model.Model_Account;
 import com.bkzalo.model.Model_Error;
-import com.bkzalo.model.Model_File;
 import com.bkzalo.model.Model_LoadChat;
 import com.bkzalo.model.Model_Message;
 import com.bkzalo.model.Model_Package_Sender;
