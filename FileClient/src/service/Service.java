@@ -26,7 +26,7 @@ public class Service {
 	private User user;
 	private Socket client;
 	private final int PORT_NUMBER = 9999;
-    private final String IP = "192.168.1.10";
+    private final String IP = "localhost";
     private List<DBFile> AllFile;
     private List<DBFile> UserFile;
     public final String PATH_FILE = "client_data/";
