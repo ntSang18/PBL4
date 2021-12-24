@@ -222,7 +222,7 @@ public class Service {
 				if (os.length > 0) {
 					mgs.setId((int)os[0]);
 					try {
-						new WriteFileSend(mgs.getFile(), toFileSend(mgs));
+						new WriteFileSend(mgs.getFile(), toFileSend(mgs)).start();
 			
 						accFile = new RandomAccessFile(mgs.getFile(), "r");
 						fileSize = accFile.length();

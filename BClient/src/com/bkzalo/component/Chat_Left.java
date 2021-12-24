@@ -2,6 +2,7 @@ package com.bkzalo.component;
 
 import java.awt.Color;
 import java.io.File;
+import java.time.LocalTime;
 import java.util.Date;
 
 import javax.swing.Icon;
@@ -39,7 +40,8 @@ public class Chat_Left extends javax.swing.JLayeredPane {
     }
 
     public void setTime() {
-        txt.setTime("10:30 PM");    //  Testing
+    	LocalTime time = LocalTime.now();
+        txt.setTime(time.getHour() + ":" + time.getMinute());    //  Testing
     }
 
     @SuppressWarnings("unchecked")

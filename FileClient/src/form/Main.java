@@ -106,7 +106,7 @@ public class Main extends JFrame {
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
 		lblNewLabel.setBackground(Color.WHITE);
-		lblNewLabel.setBounds(10, 11, 944, 24);
+		lblNewLabel.setBounds(10, 11, 232, 24);
 		panel.add(lblNewLabel);
 		
 		JPanel panel_1 = new JPanel();
